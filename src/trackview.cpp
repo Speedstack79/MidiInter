@@ -15,7 +15,7 @@ TrackView::TrackView(mTrack *track,QWidget *parent) : QFrame(parent)
 
     this->track = track;
     instrumentName = track->instrumentName;
-    if (instrumentName == "") {
+    if (instrumentName.isEmpty()) {
         instrumentName = "new track";
     }
     instrumentLabel = new QLabel(instrumentName);
